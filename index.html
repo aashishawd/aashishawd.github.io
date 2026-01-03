@@ -4,267 +4,205 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Aashish Awadhani — Portfolio</title>
-    <!-- Meta description for SEO -->
-    <meta name="description" content="Machine Learning Engineer, computer vision, PyTorch, Pandas, Software Engineer, Artificial Intelligence, Generative AI, Deep Learning, Analytics" />
+    <meta name="description" content="Machine Learning Engineer specializing in Computer Vision, LLMs, and real-time ML pipelines." />
 
-    <!-- Tailwind CSS via CDN (no build step needed) -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Favicon emoji icon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🧠</text></svg>">
 
-    <!-- Open Graph tags for social media preview -->
-    <meta property="og:title" content="Aashish Awadhani — Portfolio" />
-    <meta property="og:description" content="Machine Learning Engineer, computer vision, PyTorch, Pandas, Software Engineer, Artificial Intelligence, Generative AI, Deep Learning, Analytics" />
-    <meta property="og:type" content="website" />
-
-    <!-- Custom CSS for chip/card/tag components -->
     <style>
       html { scroll-behavior: smooth; }
-      /* Pills used for contact and links */
       .chip { display:inline-flex; align-items:center; border-radius:9999px; border:1px solid #cbd5e1; padding:0.25rem 0.75rem; font-size:0.91rem; line-height:1.25rem; }
-      /* Cards with subtle border, background, and hover effect */
       .card { border-radius:1rem; border:1px solid #e5e7eb; background-color:rgba(255,255,255,0.7); backdrop-filter:saturate(180%) blur(6px); box-shadow:0 1px 2px rgba(0,0,0,0.05); transition: box-shadow .2s; }
       .card:hover { box-shadow:0 4px 12px rgba(0,0,0,0.08); }
-      /* Small skill/project tags */
       .tag { border-radius:9999px; background:#f3f4f6; padding:0.125rem 0.5rem; font-size:0.75rem; font-weight:500; }
     </style>
   </head>
   <body class="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-900">
-    <!-- ===== Navbar ===== -->
     <header class="sticky top-0 z-30 bg-white/70 backdrop-blur border-b">
       <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <!-- Logo initials -->
-        <a href="#home" class="font-semibold">AA</a>
-        <!-- Navigation links -->
-        <ul class="flex items-center gap-5 text-sm">
-          <li><a class="hover:underline" href="#about">About</a></li>
-          <li><a class="hover:underline" href="#experience">Experience</a></li>
-          <li><a class="hover:underline" href="#projects">Projects</a></li>
-          <li><a class="hover:underline" href="#skills">Skills</a></li>
-          <li><a class="hover:underline" href="#education">Education</a></li>
-          <li><a class="hover:underline" href="#certification">Certification</a></li>
-          <li><a class="hover:underline" href="#contact">Contact</a></li>
+        <a href="#home" class="font-semibold text-xl tracking-tight">AA</a>
+        <ul class="flex items-center gap-5 text-sm font-medium">
+          <li><a class="hover:text-blue-600 transition-colors" href="#experience">Experience</a></li>
+          <li><a class="hover:text-blue-600 transition-colors" href="#projects">Projects</a></li>
+          <li><a class="hover:text-blue-600 transition-colors" href="#skills">Skills</a></li>
+          <li><a class="hover:text-blue-600 transition-colors" href="#education">Education</a></li>
+          <li><a class="hover:text-blue-600 transition-colors" href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <!-- ===== Hero Section ===== -->
     <section id="home" class="relative">
       <div class="mx-auto max-w-6xl px-4 py-16 sm:py-24">
         <div class="grid items-center gap-8 md:grid-cols-2">
-          <!-- Left: Name, title, and contact links -->
           <div>
-            <h1 class="text-3xl font-bold tracking-tight sm:text-5xl">Aashish Awadhani</h1>
-            <p class="mt-3 text-lg text-slate-600">Machine Learning • Generative AI • Computer Vision • Software Engineering • Analytics</p>
-            <p class="mt-6 text-slate-700">Los Angeles, CA</p>
-            <!-- Contact chips -->
+            <h1 class="text-4xl font-extrabold tracking-tight sm:text-6xl text-slate-900">Aashish Awadhani</h1>
+            <p class="mt-4 text-xl text-slate-600 font-medium">Machine Learning Engineer</p>
+            <p class="mt-2 text-slate-500">Los Angeles, CA</p>
             <div class="mt-6 flex flex-wrap gap-3">
-              <a href="mailto:aashishawadhani1@gmail.com" class="chip border-slate-300 hover:border-slate-400">Email</a>
-              <a href="https://www.linkedin.com/in/aashish-awadhani" target="_blank" rel="noreferrer" class="chip border-slate-300 hover:border-slate-400">LinkedIn</a>
-              <a href="https://github.com/aashishawd" target="_blank" rel="noreferrer" class="chip border-slate-300 hover:border-slate-400">GitHub</a>
+              <a href="mailto:aashishhawadhani@gmail.com" class="chip border-slate-300 hover:bg-slate-100 transition-colors">Email</a>
+              <a href="https://linkedin.com/in/aashish-awadhani" target="_blank" class="chip border-slate-300 hover:bg-slate-100 transition-colors">LinkedIn</a>
+              <a href="https://github.com/aashishawd" target="_blank" class="chip border-slate-300 hover:bg-slate-100 transition-colors">GitHub</a>
+              <a href="https://aashishawd.github.io" target="_blank" class="chip border-slate-300 hover:bg-slate-100 transition-colors">Portfolio</a>
             </div>
-            <!-- Buttons -->
-            <div class="mt-6 flex gap-3">
-              <!-- Link to PDF resume in repo -->
-              <a href="./resume.pdf" class="rounded-xl bg-slate-900 px-4 py-2 text-white hover:bg-slate-800">Download Résumé</a>
-              <a href="#projects" class="rounded-xl border px-4 py-2 hover:bg-slate-50">View Projects</a>
+            <div class="mt-8 flex gap-4">
+              <a href="./AashishhAwadhani.pdf" class="rounded-xl bg-slate-900 px-6 py-3 text-white font-medium hover:bg-slate-800 transition-all">Download Résumé</a>
+              <a href="#projects" class="rounded-xl border border-slate-300 px-6 py-3 font-medium hover:bg-slate-50 transition-all">View Projects</a>
             </div>
           </div>
-
-          <!-- Right: Summary card -->
           <div class="md:justify-self-end">
-            <div class="card p-6">
-              <h2 class="text-lg font-semibold">Summary</h2>
-              <p class="mt-3 text-slate-700">Machine Learning Engineer with expertise in deploying real-time, edge-optimized ML models. Skilled in computer vision, PyTorch, YOLOv8, and TensorRT, with a strong foundation in systems design and cloud platforms and business Analytics.</p>
+            <div class="card p-8 max-w-md">
+              <h2 class="text-xl font-bold text-slate-900">Summary</h2>
+              <p class="mt-4 text-slate-700 leading-relaxed">
+                With experience in machine learning, I've successfully delivered real-time computer vision and LLM solutions. I'm eager to leverage my expertise in end-to-end ML pipelines to drive scalable AI products.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== About Section ===== -->
-    <section id="about" class="mx-auto max-w-6xl px-4 py-10">
+    <section id="experience" class="mx-auto max-w-6xl px-4 py-12">
+      <h2 class="text-3xl font-bold border-b pb-4 mb-8">Work Experience</h2>
+      <div class="grid gap-6">
+        <article class="card p-6">
+          <header class="flex flex-wrap items-start justify-between gap-2">
+            <div>
+              <h3 class="text-xl font-bold">AI/ML Research Assistant</h3>
+              <p class="text-blue-600 font-medium">CalSys Lab, Cal Poly Pomona</p>
+            </div>
+            <span class="text-sm font-semibold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">Sep 2025 – Present</span>
+          </header>
+          <ul class="mt-4 list-disc space-y-2 pl-5 text-slate-700">
+            <li>Built and benchmarked 4 OCR pipelines (CNN, YOLO-based detection, CRNN-CTC, Transformer OCR) for CAPTCHA recognition.</li>
+            <li>Developed character recognition models using PyTorch and TensorFlow, employing CNNs and Vision Transformers (ViTs).</li>
+            <li>Improved handling of overlapping characters using a hybrid YOLO + CRNN architecture.</li>
+          </ul>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">YOLO</span><span class="tag">ViTs</span><span class="tag">OCR</span>
+          </div>
+        </article>
+
+        <article class="card p-6">
+          <header class="flex flex-wrap items-start justify-between gap-2">
+            <div>
+              <h3 class="text-xl font-bold">Machine Learning Engineer</h3>
+              <p class="text-blue-600 font-medium">Autonomous Vehicle Lab, Cal Poly Pomona</p>
+            </div>
+            <span class="text-sm font-semibold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">May 2024 – May 2025</span>
+          </header>
+          <ul class="mt-4 list-disc space-y-2 pl-5 text-slate-700">
+            <li>Engineered a real-time object detection stack using PyTorch + TensorRT on Jetson AGX Orin, achieving 35-40% lower latency.</li>
+            <li>Integrated YOLOv8 with ROS2 to enhance autonomous navigation using multi-sensor perception.</li>
+            <li>Performed model compression via quantization, pruning, and ONNX/TensorRT optimization.</li>
+            <li>Used MLflow to track experiments and iteratively tune models based on real-world sensor data.</li>
+          </ul>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="tag">Jetson AGX Orin</span><span class="tag">TensorRT</span><span class="tag">ROS2</span><span class="tag">MLflow</span><span class="tag">PyTorch</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="mx-auto max-w-6xl px-4 py-12">
+      <h2 class="text-3xl font-bold border-b pb-4 mb-8">Featured Projects</h2>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <article class="card p-6 flex flex-col">
+          <h3 class="text-xl font-bold">InsightEngine AI</h3>
+          <p class="text-sm text-blue-600 font-medium mt-1">Google Gemini 1.5/2.5 Flash • Streamlit • PyPDF2</p>
+          <p class="mt-4 text-slate-700 flex-grow">
+            Document intelligence tool facilitating interactive, "chat-first" querying of intricate PDF documents like research papers. Built a secure end-to-end processing pipeline.
+          </p>
+          <div class="mt-6">
+             <a href="https://github.com/aashishawd" target="_blank" class="text-sm font-bold underline hover:text-blue-600">View Code</a>
+          </div>
+        </article>
+
+        <article class="card p-6 flex flex-col">
+          <h3 class="text-xl font-bold">Real-Time Chat App</h3>
+          <p class="text-sm text-blue-600 font-medium mt-1">MongoDB • Express.js • React • Node.js • Socket.io</p>
+          <p class="mt-4 text-slate-700 flex-grow">
+            Built a responsive platform with JWT-based authentication and global state via Zustand. Deployed real-time messaging infrastructure with WebSocket handling.
+          </p>
+          <div class="mt-6">
+             <a href="https://github.com/aashishawd" target="_blank" class="text-sm font-bold underline hover:text-blue-600">View Code</a>
+          </div>
+        </article>
+
+        <article class="card p-6 flex flex-col">
+          <h3 class="text-xl font-bold">Stock Price Prediction</h3>
+          <p class="text-sm text-blue-600 font-medium mt-1">Python • XGBoost • Matplotlib</p>
+          <p class="mt-4 text-slate-700 flex-grow">
+            Developed a time-series forecasting model achieving 94% accuracy using advanced feature engineering like RSI and MACD. Built a complete ML pipeline with cross-validation.
+          </p>
+          <div class="mt-6">
+             <a href="https://github.com/aashishawd" target="_blank" class="text-sm font-bold underline hover:text-blue-600">View Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="mx-auto max-w-6xl px-4 py-12">
+      <h2 class="text-3xl font-bold border-b pb-4 mb-8">Technical Skills</h2>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="card p-5">
+          <h3 class="font-bold text-slate-900 border-l-4 border-blue-500 pl-3 mb-3">Machine Learning & AI</h3>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            PyTorch, TensorFlow, TensorRT, YOLO, OpenCV, CNN, RNN, Vision Transformers, Transformers, ONNX, Quantization, Pruning, CUDA, MLflow, LLMs, Hugging Face, LangChain, RAG, Vector DB, NLP, Generative AI.
+          </p>
+        </div>
+        <div class="card p-5">
+          <h3 class="font-bold text-slate-900 border-l-4 border-green-500 pl-3 mb-3">Software & Systems</h3>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            Python, C++, Java, JavaScript, Node.js, Express.js, Rest APIs, Docker, Git, Linux, ROS2, FastAPI, MySQL, PostgreSQL, MongoDB, Redis, CI/CD, Streamlit.
+          </p>
+        </div>
+        <div class="card p-5">
+          <h3 class="font-bold text-slate-900 border-l-4 border-purple-500 pl-3 mb-3">Cloud & Tools</h3>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            AWS, GCP, Azure, GitHub Actions, PowerBI, Tableau.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="mx-auto max-w-6xl px-4 py-12">
+      <h2 class="text-3xl font-bold border-b pb-4 mb-8">Education</h2>
       <div class="card p-6">
-        <h2 class="text-xl font-semibold">About</h2>
-        <p class="mt-3 text-slate-700">Hi I’m Aashish, a problem-solver passionate about technology and innovation. I recently completed my Master’s in Computer Science at Cal Poly Pomona, where I worked on exciting projects involving AI and software development. I enjoy creating practical solutions that make an impact, whether it’s building smart applications, improving systems, or exploring new ideas. Outside of work, I’m always curious, learning, and pushing myself to grow.</p>
-      </div>
-    </section>
-
-    <!-- ===== Experience Section ===== -->
-    <section id="experience" class="mx-auto max-w-6xl px-4 py-10">
-      <h2 class="text-2xl font-bold">Experience</h2>
-      <div class="mt-6 grid gap-4">
-        <!-- Example Job -->
-        <article class="card p-6">
-          <header class="flex flex-wrap items-center justify-between gap-2">
-            <h3 class="text-lg font-semibold">Machine Learning Engineer — California State Polytechnic University</h3>
-            <span class="text-sm text-slate-600">Pomona, CA · May 2024 – May 2025</span>
-          </header>
-          <!-- Bullet points of role -->
-          <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-700">
-            <li>Built and optimized real-time object detection pipelines on NVIDIA Jetson AGX Orin using PyTorch and TensorRT; improved detection accuracy by <strong>25%</strong> and reduced latency by <strong>35%</strong>.</li>
-            <li>Deployed YOLOv8 with ROS2 for real-time detection, improving autonomous navigation via multi‑modal sensor input.</li>
-            <li>Reduced inference latency by <strong>40%</strong> through quantization/pruning (PyTorch Lightning, MLflow) with iterative tuning from field data.</li>
-          </ul>
-          <!-- Tags -->
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="tag">Jetson AGX Orin</span>
-            <span class="tag">CNN</span>
-            <span class="tag">OpenCV</span>
-            <span class="tag">PyTorch</span>
-            <span class="tag">TensorFlow</span>
-            <span class="tag">YOLO</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===== Projects Section ===== -->
-    <section id="projects" class="mx-auto max-w-6xl px-4 py-10">
-      <h2 class="text-2xl font-bold">Projects</h2>
-      <div class="mt-6 grid gap-4 md:grid-cols-2">
-        <!-- Project 1 -->
-        <article class="card p-6">
-          <header class="flex items-start justify-between gap-3">
-            <div>
-              <h3 class="text-lg font-semibold">Real‑Time Chat Application</h3>
-              <p class="text-sm text-slate-600">MongoDB • Express.js • React • Node.js • Socket.io • JWT • Zustand • Tailwind CSS</p>
-            </div>
-            <a class="text-sm underline" href="https://github.com/aashishawd" target="_blank" rel="noreferrer">Code</a>
-          </header>
-          <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-700">
-            <li>Responsive chat platform with WebSocket messaging, JWT auth, and global state via Zustand.</li>
-            <li>Clean UI with Tailwind; real‑time infra using Socket.io.</li>
-          </ul>
-        </article>
-
-        <!-- Project 2 -->
-        <article class="card p-6">
-          <header class="flex items-start justify-between gap-3">
-            <div>
-              <h3 class="text-lg font-semibold">Stock Price Prediction with XGBoost</h3>
-              <p class="text-sm text-slate-600">TensorFlow • Python • JavaScript • XGBoost • Matplotlib</p>
-            </div>
-            <a class="text-sm underline" href="https://github.com/aashishawd" target="_blank" rel="noreferrer">Code</a>
-          </header>
-          <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-700">
-            <li>Time‑series forecasting with advanced features (RSI, MACD, Bollinger Bands); ~94% accuracy.</li>
-            <li>End‑to‑end ML pipeline with cross‑validation and clear visualizations.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===== Skills Section ===== -->
-    <section id="skills" class="mx-auto max-w-6xl px-4 py-10">
-      <h2 class="text-2xl font-bold">Skills</h2>
-      <!-- Grid of skill categories -->
-      <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        <div class="card p-4">
-          <h3 class="font-semibold">Languages & Frameworks</h3>
-          <p class="mt-2 text-slate-700">Java, JavaScript, Next.js, C#, Node.js, C++, Express.js, Python</p>
-        </div>
-        <div class="card p-4">
-          <h3 class="font-semibold">Software Engineering</h3>
-          <p class="mt-2 text-slate-700">System Design, REST APIs, OOP</p>
-        </div>
-        <div class="card p-4">
-          <h3 class="font-semibold">ML & AI</h3>
-          <p class="mt-2 text-slate-700">PyTorch, YOLOv8, OpenCV, TensorRT, Keras, MLflow, TensorFlow</p>
-        </div>
-        <div class="card p-4">
-          <h3 class="font-semibold">Data Tools</h3>
-          <p class="mt-2 text-slate-700">Pandas, NumPy, Matplotlib</p>
-        </div>
-        <div class="card p-4">
-          <h3 class="font-semibold">DevOps & Infra</h3>
-          <p class="mt-2 text-slate-700">Docker, Git, PyTorch Lightning, ROS2</p>
-        </div>
-        <div class="card p-4">
-          <h3 class="font-semibold">Cloud & Databases</h3>
-          <p class="mt-2 text-slate-700">AWS, GCP, Azure, MySQL, MongoDB, PostgreSQL</p>
-        </div>
-        <div class="card p-4">
-          <h3 class="font-semibold">Analytics</h3>
-          <p class="mt-2 text-slate-700">Dashboard Development, Forecasting & Trend Analysis, Tableau, Power BI, CRM/ERP, Salesforce, SAP</p>
-        </div>
-        <div class="card p-4">
-          <h3 class="font-semibold"> Soft Skills</h3>
-          <p class="mt-2 text-slate-700">	Problem-Solving, Critical Thinking, Communication,Presentation, Cross-Functional Collaboration, Business Process Optimizations</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Education Section ===== -->
-    <section id="education" class="mx-auto max-w-6xl px-4 py-10">
-      <h2 class="text-2xl font-bold">Education</h2>
-      <div class="mt-6 grid gap-4">
-        <!-- Masters -->
-        <div class="card p-6">
-          <div class="flex flex-wrap items-center justify-between gap-2">
-            <h3 class="text-lg font-semibold">M.S. in Computer Science — California State Polytechnic University, Pomona</h3>
-            <span class="text-sm text-slate-600">May 2025</span>
-          </div>
-          <p class="mt-2 text-slate-700">Courses: Algorithms, Software Engineering, Machine Learning, Autonomous Vehicle.</p>
-        </div>
-        <!-- Bachelors -->
-        <div class="card p-6">
-          <div class="flex flex-wrap items-center justify-between gap-2">
-            <h3 class="text-lg font-semibold">B.Tech in Computer Science & Engineering — Solapur University, India</h3>
-            <span class="text-sm text-slate-600">July 2022</span>
-          </div>
-          <p class="mt-2 text-slate-700">Courses: Data Structures and Algorithms, Database Systems, Operating Systems, Computer Networks.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Certifications Section ===== -->
-    <section id="certs" class="mx-auto max-w-6xl px-4 py-10">
-      <h2 class="text-2xl font-bold">Certification</h2>
-      <div class="mt-6 card p-6">
         <div class="flex flex-wrap items-center justify-between gap-2">
-          <h3 class="text-lg font-semibold">Rapid Application Development with Large Language Models (LLMs) — NVIDIA DLI</h3>
-          <span class="text-sm text-slate-600">June 2025</span>
-        </div>
-        <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-700">
-          <li>Built AI-powered apps using Transformers, LangChain, and vector databases.</li>
-          <li>Developed LLM solutions for text generation, semantic search, and conversational agents.</li>
-          <li>Applied prompt engineering and RAG techniques to real-world use cases.</li>
-        </ul>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span class="tag">Gen AI</span>
-          <span class="tag">LLMs</span>
-          <span class="tag">Transformers</span>
-          <span class="tag">VLMs</span>
-          <span class="tag">Deep Learning</span>
-          <span class="tag">RAG</span>
+          <h3 class="text-lg font-bold">M.S., Computer Science — Cal Poly Pomona</h3>
+          <span class="text-sm font-semibold text-slate-500">GPA: 3.97 | Aug 2023 - May 2025</span>
         </div>
       </div>
     </section>
 
-    <!-- ===== Contact Section ===== -->
-    <section id="contact" class="mx-auto max-w-6xl px-4 py-10">
+    <section id="certification" class="mx-auto max-w-6xl px-4 py-12">
+      <h2 class="text-3xl font-bold border-b pb-4 mb-8">Certification</h2>
       <div class="card p-6">
-        <h2 class="text-xl font-semibold">Get in touch</h2>
-        <p class="mt-3 text-slate-700">I’m open to Machine Learning, Computer Vision, AI, Software Engineering, Business Analytics roles. The fastest way to reach me is email.</p>
-        <!-- Contact buttons -->
-        <div class="mt-4 flex flex-wrap gap-3">
-          <a href="mailto:aashishawadhani1@gmail.com" class="rounded-xl bg-slate-900 px-4 py-2 text-white hover:bg-slate-800">Email me</a>
-          <a href="https://www.linkedin.com/in/aashish-awadhani" target="_blank" rel="noreferrer" class="rounded-xl border px-4 py-2 hover:bg-slate-50">LinkedIn</a>
-          <a href="https://github.com/aashishawd" target="_blank" rel="noreferrer" class="rounded-xl border px-4 py-2 hover:bg-slate-50">GitHub</a>
+        <h3 class="text-lg font-bold">Rapid App Development with LLMs — NVIDIA DLI</h3>
+        <p class="mt-3 text-slate-700 leading-relaxed">
+          Built LLM-based applications using Transformers, LangChain, and vector databases; developed text-generation, RAG, and semantic search pipelines for production-style use cases.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="mx-auto max-w-6xl px-4 py-12">
+      <div class="card p-8 bg-slate-900 text-white">
+        <h2 class="text-2xl font-bold">Let's Connect</h2>
+        <p class="mt-4 text-slate-300 max-w-2xl">
+          Open to Machine Learning, Computer Vision, AI, and Software Engineering roles. The fastest way to reach me is email.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="mailto:aashishhawadhani@gmail.com" class="bg-white text-slate-900 px-6 py-2 rounded-xl font-bold hover:bg-slate-200 transition-colors">Email Me</a>
+          <a href="https://linkedin.com/in/aashish-awadhani" target="_blank" class="border border-white px-6 py-2 rounded-xl font-bold hover:bg-white/10 transition-colors">LinkedIn</a>
         </div>
       </div>
     </section>
 
-    <!-- ===== Footer ===== -->
-    <footer class="py-10 text-center text-sm text-slate-500">
-      Built by Aashish Awadhani · © <span id="year"></span>
+    <footer class="py-12 text-center text-sm text-slate-500 border-t">
+      &copy; <span id="year"></span> Aashish Awadhani. Built with Tailwind CSS.
     </footer>
 
-    <!-- Script to update footer year automatically -->
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </body>
 </html>
