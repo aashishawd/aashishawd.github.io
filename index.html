@@ -1,208 +1,769 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Aashishh Awadhani — Portfolio</title>
-    <meta name="description" content="Machine Learning Engineer specializing in Computer Vision, LLMs, and real-time ML pipelines." />
+<html lang="en" class="scroll-smooth">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aashish Awadhani | Machine Learning Engineer</title>
+  <meta name="description"
+    content="Portfolio of Aashish Awadhani, a Machine Learning Engineer specializing in Computer Vision, LLMs, and real-time AI pipelines." />
 
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🧠</text></svg>">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
-    <style>
-      html { scroll-behavior: smooth; }
-      .chip { display:inline-flex; align-items:center; border-radius:9999px; border:1px solid #cbd5e1; padding:0.25rem 0.75rem; font-size:0.91rem; line-height:1.25rem; }
-      .card { border-radius:1rem; border:1px solid #e5e7eb; background-color:rgba(255,255,255,0.7); backdrop-filter:saturate(180%) blur(6px); box-shadow:0 1px 2px rgba(0,0,0,0.05); transition: box-shadow .2s; }
-      .card:hover { box-shadow:0 4px 12px rgba(0,0,0,0.08); }
-      .tag { border-radius:9999px; background:#f3f4f6; padding:0.125rem 0.5rem; font-size:0.75rem; font-weight:500; }
-    </style>
-  </head>
-  <body class="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-900">
-    <header class="sticky top-0 z-30 bg-white/70 backdrop-blur border-b">
-      <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <a href="#home" class="font-semibold text-xl tracking-tight">AA</a>
-        <ul class="flex items-center gap-5 text-sm font-medium">
-          <li><a class="hover:text-blue-600 transition-colors" href="#experience">Experience</a></li>
-          <li><a class="hover:text-blue-600 transition-colors" href="#projects">Projects</a></li>
-          <li><a class="hover:text-blue-600 transition-colors" href="#skills">Skills</a></li>
-          <li><a class="hover:text-blue-600 transition-colors" href="#education">Education</a></li>
-          <li><a class="hover:text-blue-600 transition-colors" href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <section id="home" class="relative">
-      <div class="mx-auto max-w-6xl px-4 py-16 sm:py-24">
-        <div class="grid items-center gap-8 md:grid-cols-2">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config for Custom Colors -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            slate: {
+              850: '#151e2e',
+              900: '#0f172a',
+              950: '#020617',
+            },
+            primary: {
+              400: '#60a5fa', // Blue
+              500: '#3b82f6',
+              600: '#2563eb',
+            },
+            accent: {
+              400: '#818cf8', // Indigo
+              500: '#6366f1',
+            }
+          },
+          animation: {
+            'blob': 'blob 7s infinite',
+            'fade-in': 'fadeIn 0.5s ease-out forwards',
+            'slide-up': 'slideUp 0.5s ease-out forwards',
+          },
+          keyframes: {
+            blob: {
+              '0%': { transform: 'translate(0px, 0px) scale(1)' },
+              '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+              '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+              '100%': { transform: 'translate(0px, 0px) scale(1)' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            blink: {
+              '0%, 100%': { opacity: '1' },
+              '50%': { opacity: '0' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+
+    /* Glassmorphism Utilities */
+    .glass-panel {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-nav {
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Gradient Text */
+    .text-gradient {
+      background: linear-gradient(to right, #60a5fa, #818cf8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1em;
+      background-color: #3b82f6;
+      margin-left: 2px;
+      vertical-align: middle;
+      animation: blink 1s step-end infinite;
+    }
+
+    /* Timeline Line */
+    .timeline-line::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background: #334155;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-950 text-slate-300 antialiased selection:bg-primary-500 selection:text-white">
+
+  <!-- Background Decorative Blobs -->
+  <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+    <div
+      class="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/20 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob">
+    </div>
+    <div
+      class="absolute top-0 right-1/4 w-96 h-96 bg-accent-500/20 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob animation-delay-2000">
+    </div>
+    <div
+      class="absolute -bottom-32 left-1/3 w-96 h-96 bg-purple-500/20 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob animation-delay-4000">
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="fixed top-0 w-full z-50 transition-all duration-300" id="navbar">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <a href="#home" class="font-bold text-xl tracking-tight text-white flex items-center gap-2 group">
+        <span
+          class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white text-sm shadow-lg shadow-primary-500/20 group-hover:rotate-12 transition-transform duration-300">AA</span>
+        <span class="group-hover:text-primary-400 transition-colors">Aashish Awadhani</span>
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+
+      <!-- Desktop Nav -->
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <li><a class="hover:text-primary-400 transition-colors" href="#about">About</a></li>
+        <li><a class="hover:text-primary-400 transition-colors" href="#experience">Experience</a></li>
+        <li><a class="hover:text-primary-400 transition-colors" href="#projects">Projects</a></li>
+        <li><a class="hover:text-primary-400 transition-colors" href="#skills">Skills</a></li>
+        <li>
+          <a href="#contact"
+            class="px-5 py-2 rounded-full bg-slate-800 text-white border border-slate-700 hover:border-primary-500 hover:bg-slate-700 transition-all shadow-lg hover:shadow-primary-500/25">
+            Contact Me
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden glass-nav border-t border-slate-800 absolute w-full">
+      <ul class="flex flex-col p-4 space-y-4 text-sm font-medium">
+        <li><a class="block hover:text-primary-400" href="#about" onclick="toggleMobileMenu()">About</a></li>
+        <li><a class="block hover:text-primary-400" href="#experience" onclick="toggleMobileMenu()">Experience</a></li>
+        <li><a class="block hover:text-primary-400" href="#projects" onclick="toggleMobileMenu()">Projects</a></li>
+        <li><a class="block hover:text-primary-400" href="#skills" onclick="toggleMobileMenu()">Skills</a></li>
+        <li><a class="block hover:text-primary-400" href="#contact" onclick="toggleMobileMenu()">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="relative z-10">
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16">
+      <div class="mx-auto max-w-6xl px-6 py-12 md:py-20 text-center md:text-left">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6 animate-slide-up">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              Available for hire
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-tight">
+              Hi, I'm <br>
+              <span class="text-gradient">Aashish</span>
+            </h1>
+
+            <h2 class="text-2xl md:text-3xl font-medium text-slate-400 h-10">
+              I build <span id="typing-text" class="text-white border-b-2 border-primary-500 pb-1"></span><span
+                class="cursor"></span>
+            </h2>
+
+            <p class="text-lg text-slate-400 max-w-xl mx-auto md:mx-0 leading-relaxed">
+              Machine Learning Engineer specializing in Computer Vision, LLMs, and real-time AI pipelines. I turn
+              complex data into scalable, intelligent products.
+            </p>
+
+            <div id="about" class="scroll-mt-24"></div>
+
+            <div class="flex flex-wrap gap-4 justify-center md:justify-start pt-4">
+              <a href="./AashishhAwadhani.pdf" target="_blank"
+                class="flex items-center gap-2 px-6 py-3 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-semibold transition-all shadow-lg shadow-primary-500/25 hover:scale-105">
+                <i class="fa-solid fa-file-arrow-down"></i>
+                Resume
+              </a>
+              <a href="#projects"
+                class="flex items-center gap-2 px-6 py-3 rounded-xl glass-panel hover:bg-slate-800 text-white font-semibold transition-all border border-slate-700 hover:border-slate-500">
+                View Projects
+              </a>
+            </div>
+
+            <div class="flex items-center justify-center md:justify-start gap-6 pt-6">
+              <a href="https://github.com/aashishawd" target="_blank" aria-label="GitHub Profile"
+                class="text-slate-400 hover:text-white transition-colors text-2xl"><i
+                  class="fa-brands fa-github"></i></a>
+              <a href="https://linkedin.com/in/aashish-awadhani" target="_blank" aria-label="LinkedIn Profile"
+                class="text-slate-400 hover:text-blue-400 transition-colors text-2xl"><i
+                  class="fa-brands fa-linkedin"></i></a>
+              <a href="mailto:aashishhawadhani@gmail.com" aria-label="Email Me"
+                class="text-slate-400 hover:text-red-400 transition-colors text-2xl"><i
+                  class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <!-- Hero Visual / Abstract Code Representation -->
+          <div class="relative hidden md:block animate-fade-in" style="animation-delay: 0.2s;">
+            <div
+              class="glass-panel rounded-2xl p-6 border border-slate-700 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+              <div class="flex items-center gap-2 mb-4 border-b border-slate-700 pb-4">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                <div class="text-xs text-slate-500 ml-auto">vision_transformer.py</div>
+              </div>
+              <div class="font-mono text-sm space-y-1">
+                <div><span class="text-purple-400">from</span> <span class="text-white">transformers</span> <span
+                    class="text-purple-400">import</span> <span class="text-white">pipeline</span></div>
+                <div><span class="text-purple-400">from</span> <span class="text-white">PIL</span> <span
+                    class="text-purple-400">import</span> <span class="text-white">Image</span></div>
+                <div><span class="text-purple-400">import</span> <span class="text-white">requests</span></div>
+                <br>
+                <div class="text-slate-400"># 1. Initialize ViT model</div>
+                <div><span class="text-white">model</span> = <span class="text-yellow-300">pipeline</span>(<span
+                    class="text-green-400">"image-classification"</span>)</div>
+                <br>
+                <div class="text-slate-400"># 2. Fetch and open image</div>
+                <div><span class="text-white">url</span> = <span class="text-green-400">"http://.../cat.jpg"</span>
+                </div>
+                <div><span class="text-white">img</span> = <span class="text-white">Image</span>.<span
+                    class="text-yellow-300">open</span>(<span class="text-white">requests</span>.<span
+                    class="text-yellow-300">get</span>(<span class="text-white">url</span>).<span
+                    class="text-white">raw</span>)</div>
+                <br>
+                <div class="text-slate-400"># 3. Run inference</div>
+                <div><span class="text-white">result</span> = <span class="text-white">model</span>(<span
+                    class="text-white">img</span>)[<span class="text-white">0</span>]</div>
+                <div><span class="text-yellow-300">print</span>(<span class="text-green-400">f"Label:
+                    {result['label']}"</span>)</div>
+              </div>
+            </div>
+            <!-- Floating Badge -->
+            <div
+              class="absolute -bottom-6 -left-6 glass-panel px-4 py-2 rounded-lg border border-primary-500/30 text-xs font-mono text-primary-300 shadow-lg animate-bounce duration-[3000ms]">
+              <i class="fa-solid fa-bolt mr-2 text-yellow-400"></i>Latency: 10ms
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 relative scroll-mt-20">
+      <div class="mx-auto max-w-4xl px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Experience</h2>
+          <div class="w-20 h-1 bg-primary-500 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="relative pl-8 md:pl-0">
+          <!-- Vertical Line -->
+          <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-slate-800 transform md:-translate-x-1/2">
+          </div>
+
+          <!-- Experience Item 1 -->
+          <div class="relative mb-12 md:flex md:justify-between items-center w-full group">
+            <div class="md:w-[45%] mb-4 md:mb-0 md:text-right order-1">
+              <h3 class="text-xl font-bold text-white">AI/ML Research Assistant</h3>
+              <p class="text-primary-400 font-medium">CalSys Lab, Cal Poly Pomona</p>
+            </div>
+
+            <div
+              class="absolute left-[7px] md:left-1/2 md:-ml-[11px] w-6 h-6 rounded-full bg-slate-900 border-4 border-primary-500 z-10 order-2">
+            </div>
+
+            <div class="md:w-[45%] pl-8 md:pl-0 order-3">
+              <div class="glass-panel p-6 rounded-xl hover:border-primary-500/50 transition-colors">
+                <span
+                  class="inline-block px-3 py-1 text-xs font-semibold bg-primary-500/10 text-primary-400 rounded-full mb-3">Sep
+                  2025 – Present</span>
+                <ul class="list-disc list-outside ml-4 space-y-2 text-sm text-slate-400">
+                  <li>Built and benchmarked 4 OCR pipelines (CNN, YOLO, Transformer) for CAPTCHA recognition.</li>
+                  <li>Deployed character recognition models using PyTorch & ViTs on distorted inputs.</li>
+                  <li>Optimized segmentation with hybrid YOLO + CRNN architecture.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Item 2 -->
+          <div class="relative mb-12 md:flex md:justify-between items-center w-full group">
+            <div class="md:w-[45%] order-1 md:order-3 mb-4 md:mb-0">
+              <h3 class="text-xl font-bold text-white">Machine Learning Engineer</h3>
+              <p class="text-primary-400 font-medium">Autonomous Vehicle Lab, CPP</p>
+            </div>
+
+            <div
+              class="absolute left-[7px] md:left-1/2 md:-ml-[11px] w-6 h-6 rounded-full bg-slate-900 border-4 border-accent-500 z-10 order-2">
+            </div>
+
+            <div class="md:w-[45%] pl-8 md:pl-0 order-3 md:order-1 md:text-right">
+              <div
+                class="glass-panel p-6 rounded-xl hover:border-accent-500/50 transition-colors text-left md:text-right">
+                <span
+                  class="inline-block px-3 py-1 text-xs font-semibold bg-accent-500/10 text-accent-400 rounded-full mb-3">May
+                  2024 – May 2025</span>
+                <ul class="list-disc list-outside ml-4 md:mr-4 md:ml-0 space-y-2 text-sm text-slate-400 md:list-none">
+                  <li>Engineered real-time object detection stack (PyTorch + TensorRT) on Jetson AGX Orin, reducing
+                    latency by 40%.</li>
+                  <li>Integrated YOLOv8 with ROS2 for multi-sensor perception.</li>
+                  <li>Implemented model quantization and pruning for embedded deployment.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-slate-900/50 scroll-mt-20">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
           <div>
-            <h1 class="text-4xl font-extrabold tracking-tight sm:text-6xl text-slate-900">Aashish Awadhani</h1>
-            <p class="mt-4 text-xl text-slate-600 font-medium">Machine Learning Engineer</p>
-            <p class="mt-2 text-slate-500">Los Angeles, CA</p>
-            <div class="mt-6 flex flex-wrap gap-3">
-              <a href="mailto:aashishhawadhani@gmail.com" class="chip border-slate-300 hover:bg-slate-100 transition-colors">Email</a>
-              <a href="https://linkedin.com/in/aashish-awadhani" target="_blank" class="chip border-slate-300 hover:bg-slate-100 transition-colors">LinkedIn</a>
-              <a href="https://github.com/aashishawd" target="_blank" class="chip border-slate-300 hover:bg-slate-100 transition-colors">GitHub</a>
-              <a href="https://aashishawd.github.io" target="_blank" class="chip border-slate-300 hover:bg-slate-100 transition-colors">Portfolio</a>
-            </div>
-            <div class="mt-8 flex gap-4">
-              <a href="./AashishhAwadhani.pdf" class="rounded-xl bg-slate-900 px-6 py-3 text-white font-medium hover:bg-slate-800 transition-all">Download Résumé</a>
-              <a href="#projects" class="rounded-xl border border-slate-300 px-6 py-3 font-medium hover:bg-slate-50 transition-all">View Projects</a>
-            </div>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Featured Projects</h2>
+            <p class="text-slate-400 max-w-xl">A collection of my work in Computer Vision, LLMs, and System Design.</p>
           </div>
-          <div class="md:justify-self-end">
-            <div class="card p-8 max-w-md">
-              <h2 class="text-xl font-bold text-slate-900">Summary</h2>
-              <p class="mt-4 text-slate-700 leading-relaxed">
-                With experience in machine learning, I've successfully delivered real-time computer vision and LLM solutions. I'm eager to leverage my expertise in end-to-end ML pipelines to drive scalable AI products.
+          <a href="https://github.com/aashishawd" target="_blank"
+            class="group relative inline-flex items-center gap-3 px-6 py-3 rounded-full bg-slate-800/50 text-white border border-slate-700 hover:border-primary-500/50 transition-all overflow-hidden shadow-lg">
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-accent-500/10 opacity-0 group-hover:opacity-100 transition-opacity">
+            </div>
+            <i class="fa-brands fa-github text-xl group-hover:scale-110 transition-transform"></i>
+            <span class="text-sm font-bold tracking-wide">View GitHub Profile</span>
+            <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <a href="https://github.com/aashishawd/GestureLink" target="_blank"
+            class="glass-panel rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-primary-500/10 transition-all duration-300 group flex flex-col h-full border-t-2 border-t-transparent hover:border-t-blue-500 hover:scale-[1.02]">
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold text-white group-hover:text-primary-400 transition-colors">GestureLink</h3>
+                <i
+                  class="fa-solid fa-arrow-up-right-from-square text-slate-500 text-xs opacity-0 group-hover:opacity-100 transition-opacity"></i>
+              </div>
+              <p class="text-slate-400 text-sm mb-4 flex-grow">
+                Decoupled macOS/iOS system using Vision framework for real-time hand pose analysis. Triggers
+                system-level reactions via low-latency UDP based on gestures like Victory or Thumbs Up.
               </p>
+              <div class="flex flex-wrap gap-2 mt-auto">
+                <span
+                  class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">SwiftUI</span>
+                <span
+                  class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">Vision</span>
+                <span class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">UDP</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://github.com/aashishawd/agentic_marketing" target="_blank"
+            class="glass-panel rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 group flex flex-col h-full border-t-2 border-t-transparent hover:border-t-purple-500 hover:scale-[1.02]">
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">Agentic Marketing
+                </h3>
+                <i
+                  class="fa-solid fa-arrow-up-right-from-square text-slate-500 text-xs opacity-0 group-hover:opacity-100 transition-opacity"></i>
+              </div>
+              <p class="text-slate-400 text-sm mb-4 flex-grow">
+                Automated Instagram marketing workflow using 4 AI agents (CrewAI + Gemini). Generates strategy, content
+                calendar, SEO copy, and image prompts asynchronously.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-auto">
+                <span class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">Gemini
+                  1.5</span>
+                <span
+                  class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">CrewAI</span>
+                <span
+                  class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">LangChain</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://github.com/aashishawd/insight-engine-ai" target="_blank"
+            class="glass-panel rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-300 group flex flex-col h-full border-t-2 border-t-transparent hover:border-t-green-500 hover:scale-[1.02]">
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold text-white group-hover:text-green-400 transition-colors">InsightEngine AI
+                </h3>
+                <i
+                  class="fa-solid fa-arrow-up-right-from-square text-slate-500 text-xs opacity-0 group-hover:opacity-100 transition-opacity"></i>
+              </div>
+              <p class="text-slate-400 text-sm mb-4 flex-grow">
+                RAG-based document intelligence tool for "chat-first" querying of complex PDFs. Features secure
+                end-to-end pipeline with stream-based responses.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-auto">
+                <span
+                  class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">Streamlit</span>
+                <span class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">RAG</span>
+                <span
+                  class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">Gemini</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://github.com/aashishawd/mern-chat-app" target="_blank"
+            class="glass-panel rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-300 group flex flex-col h-full border-t-2 border-t-transparent hover:border-t-orange-500 hover:scale-[1.02]">
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">Real-Time Chat
+                </h3>
+                <i
+                  class="fa-solid fa-arrow-up-right-from-square text-slate-500 text-xs opacity-0 group-hover:opacity-100 transition-opacity"></i>
+              </div>
+              <p class="text-slate-400 text-sm mb-4 flex-grow">
+                Full-stack MERN chat platform with Socket.io for live messaging. Includes JWT auth, Zustand state
+                management, and WebSocket infrastructure.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-auto">
+                <span class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">MERN</span>
+                <span
+                  class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">Socket.io</span>
+                <span class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">JWT</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://github.com/aashishawd/stock_prediction_XGBoost" target="_blank"
+            class="glass-panel rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-teal-500/10 transition-all duration-300 group flex flex-col h-full border-t-2 border-t-transparent hover:border-t-teal-500 hover:scale-[1.02]">
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold text-white group-hover:text-teal-400 transition-colors">Stock Prediction
+                </h3>
+                <i
+                  class="fa-solid fa-arrow-up-right-from-square text-slate-500 text-xs opacity-0 group-hover:opacity-100 transition-opacity"></i>
+              </div>
+              <p class="text-slate-400 text-sm mb-4 flex-grow">
+                Time-series forecasting with XGBoost (94% accuracy). Implements advanced technical indicators (RSI,
+                MACD, Bollinger Bands) in a complete pipeline.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-auto">
+                <span
+                  class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">XGBoost</span>
+                <span
+                  class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">Python</span>
+                <span
+                  class="px-2 py-1 text-xs rounded bg-slate-800 text-slate-300 border border-slate-700">Matplotlib</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 scroll-mt-20">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Technical Expertise</h2>
+          <div class="w-20 h-1 bg-accent-500 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Category 1: AI & Core ML -->
+          <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group">
+            <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+              <i class="fa-solid fa-brain text-8xl text-primary-500"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+              <i class="fa-solid fa-microchip text-primary-500"></i> AI & Machine Learning
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">PyTorch</span>
+              <span
+                class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">TensorFlow</span>
+              <span
+                class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">XGBoost</span>
+              <span
+                class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">Scikit-Learn</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">CNN /
+                RNN</span>
+              <span
+                class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">Time-Series</span>
+              <span
+                class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">MLflow</span>
+              <span
+                class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">CUDA</span>
+              <span
+                class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">Hyperparameter
+                Tuning</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">Technical
+                Indicators (RSI/MACD)</span>
+            </div>
+          </div>
+
+          <!-- Category 2: GenAI & LLMs -->
+          <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group">
+            <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+              <i class="fa-solid fa-wand-sparkles text-8xl text-yellow-500"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+              <i class="fa-solid fa-wand-magic-sparkles text-yellow-500"></i> GenAI & LLMs
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">LangChain</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">RAG
+                Pipelines</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">Vector
+                DBs (Chroma/Pinecone)</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">Agentic
+                Workflows (CrewAI)</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">Hugging
+                Face</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">Gemini
+                1.5 / 2.0 Flash</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">GPT-4 /
+                OpenAI API</span>
+              <span
+                class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">LLMOps</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">Semantic
+                Search</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Computer Vision & Perception -->
+          <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group">
+            <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+              <i class="fa-solid fa-eye text-8xl text-accent-500"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+              <i class="fa-solid fa-camera-retro text-accent-500"></i> Computer Vision & Robotics
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">YOLO
+                (v8/v11)</span>
+              <span
+                class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">OpenCV</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">Vision
+                Transformers (ViTs)</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">TensorRT
+                Optimization</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">Model
+                Quantization & Pruning</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">ROS2
+                (Robot Operating System)</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">Jetson
+                AGX Orin</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">OCR &
+                CRNN-CTC</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">Object
+                Detection & Segmentation</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Software & Infrastructure -->
+          <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group">
+            <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+              <i class="fa-solid fa-server text-8xl text-purple-500"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+              <i class="fa-solid fa-code-branch text-purple-500"></i> Software & Infrastructure
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">Python /
+                C++ / Java / Swift</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">MERN
+                Stack (React/Node.js)</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">Docker &
+                Containerization</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">AWS / GCP
+                / Azure</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">CI/CD
+                (GitHub Actions)</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">FastAPI &
+                REST APIs</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">Socket.io
+                & WebSockets</span>
+              <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">MongoDB /
+                PostgreSQL</span>
+              <span
+                class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700">Streamlit</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="experience" class="mx-auto max-w-6xl px-4 py-12">
-      <h2 class="text-3xl font-bold border-b pb-4 mb-8">Work Experience</h2>
-      <div class="grid gap-6">
-        <article class="card p-6">
-          <header class="flex flex-wrap items-start justify-between gap-2">
-            <div>
-              <h3 class="text-xl font-bold">AI/ML Research Assistant</h3>
-              <p class="text-blue-600 font-medium">CalSys Lab, Cal Poly Pomona</p>
+    <!-- Education & Certs -->
+    <section class="py-20 bg-slate-900/50">
+      <div class="mx-auto max-w-5xl px-6 grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+            <i class="fa-solid fa-graduation-cap text-slate-500"></i> Education
+          </h3>
+          <div class="glass-panel p-6 rounded-xl border-l-4 border-l-primary-500">
+            <h4 class="text-lg font-bold text-white">M.S., Computer Science</h4>
+            <p class="text-primary-400">Cal Poly Pomona</p>
+            <p class="text-sm text-slate-500 mt-2">Aug 2023 - May 2025</p>
+            <p class="text-sm text-slate-300 mt-2"><span class="font-semibold text-white">GPA:</span> 3.97</p>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+            <i class="fa-solid fa-certificate text-slate-500"></i> Certification
+          </h3>
+          <a href="./NvidiaCertificate.pdf" target="_blank"
+            class="block glass-panel p-6 rounded-xl border-l-4 border-l-accent-500 hover:bg-slate-800/80 transition-all hover:scale-[1.02] group">
+            <div class="flex justify-between items-start">
+              <h4 class="text-lg font-bold text-white group-hover:text-accent-400 transition-colors">Rapid App
+                Development with LLMs</h4>
+              <i class="fa-solid fa-arrow-up-right-from-square text-slate-500 text-xs mt-1"></i>
             </div>
-            <span class="text-sm font-semibold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">Sep 2025 – Present</span>
-          </header>
-          <ul class="mt-4 list-disc space-y-2 pl-5 text-slate-700">
-            <li>Built and benchmarked 4 OCR pipelines (CNN, YOLO-based detection, CRNN-CTC, Transformer OCR) for CAPTCHA recognition.</li>
-            <li>Developed character recognition models using PyTorch and TensorFlow, employing CNNs and Vision Transformers (ViTs).</li>
-            <li>Improved handling of overlapping characters using a hybrid YOLO + CRNN architecture.</li>
-          </ul>
-          <div class="mt-6 flex flex-wrap gap-2">
-            <span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">YOLO</span><span class="tag">ViTs</span><span class="tag">OCR</span>
-          </div>
-        </article>
-
-        <article class="card p-6">
-          <header class="flex flex-wrap items-start justify-between gap-2">
-            <div>
-              <h3 class="text-xl font-bold">Machine Learning Engineer</h3>
-              <p class="text-blue-600 font-medium">Autonomous Vehicle Lab, Cal Poly Pomona</p>
-            </div>
-            <span class="text-sm font-semibold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">May 2024 – May 2025</span>
-          </header>
-          <ul class="mt-4 list-disc space-y-2 pl-5 text-slate-700">
-            <li>Engineered a real-time object detection stack using PyTorch + TensorRT on Jetson AGX Orin, achieving 35-40% lower latency.</li>
-            <li>Integrated YOLOv8 with ROS2 to enhance autonomous navigation using multi-sensor perception.</li>
-            <li>Performed model compression via quantization, pruning, and ONNX/TensorRT optimization.</li>
-            <li>Used MLflow to track experiments and iteratively tune models based on real-world sensor data.</li>
-          </ul>
-          <div class="mt-6 flex flex-wrap gap-2">
-            <span class="tag">Jetson AGX Orin</span><span class="tag">TensorRT</span><span class="tag">ROS2</span><span class="tag">MLflow</span><span class="tag">PyTorch</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="projects" class="mx-auto max-w-6xl px-4 py-12">
-      <h2 class="text-3xl font-bold border-b pb-4 mb-8">Featured Projects</h2>
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <article class="card p-6 flex flex-col">
-          <h3 class="text-xl font-bold">InsightEngine AI</h3>
-          <p class="text-sm text-blue-600 font-medium mt-1">Google Gemini 1.5/2.5 Flash • Streamlit • PyPDF2</p>
-          <p class="mt-4 text-slate-700 flex-grow">
-            Document intelligence tool facilitating interactive, "chat-first" querying of intricate PDF documents like research papers. Built a secure end-to-end processing pipeline.
-          </p>
-          <div class="mt-6">
-             <a href="https://github.com/aashishawd" target="_blank" class="text-sm font-bold underline hover:text-blue-600">View Code</a>
-          </div>
-        </article>
-
-        <article class="card p-6 flex flex-col">
-          <h3 class="text-xl font-bold">Real-Time Chat App</h3>
-          <p class="text-sm text-blue-600 font-medium mt-1">MongoDB • Express.js • React • Node.js • Socket.io</p>
-          <p class="mt-4 text-slate-700 flex-grow">
-            Built a responsive platform with JWT-based authentication and global state via Zustand. Deployed real-time messaging infrastructure with WebSocket handling.
-          </p>
-          <div class="mt-6">
-             <a href="https://github.com/aashishawd" target="_blank" class="text-sm font-bold underline hover:text-blue-600">View Code</a>
-          </div>
-        </article>
-
-        <article class="card p-6 flex flex-col">
-          <h3 class="text-xl font-bold">Stock Price Prediction</h3>
-          <p class="text-sm text-blue-600 font-medium mt-1">Python • XGBoost • Matplotlib</p>
-          <p class="mt-4 text-slate-700 flex-grow">
-            Developed a time-series forecasting model achieving 94% accuracy using advanced feature engineering like RSI and MACD. Built a complete ML pipeline with cross-validation.
-          </p>
-          <div class="mt-6">
-             <a href="https://github.com/aashishawd" target="_blank" class="text-sm font-bold underline hover:text-blue-600">View Code</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="skills" class="mx-auto max-w-6xl px-4 py-12">
-      <h2 class="text-3xl font-bold border-b pb-4 mb-8">Technical Skills</h2>
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <div class="card p-5">
-          <h3 class="font-bold text-slate-900 border-l-4 border-blue-500 pl-3 mb-3">Machine Learning & AI</h3>
-          <p class="text-sm text-slate-700 leading-relaxed">
-            PyTorch, TensorFlow, TensorRT, YOLO, OpenCV, CNN, RNN, Vision Transformers, Transformers, ONNX, Quantization, Pruning, CUDA, MLflow, LLMs, Hugging Face, LangChain, RAG, Vector DB, NLP, Generative AI.
-          </p>
-        </div>
-        <div class="card p-5">
-          <h3 class="font-bold text-slate-900 border-l-4 border-green-500 pl-3 mb-3">Software & Systems</h3>
-          <p class="text-sm text-slate-700 leading-relaxed">
-            Python, C++, Java, JavaScript, Node.js, Express.js, Rest APIs, Docker, Git, Linux, ROS2, FastAPI, MySQL, PostgreSQL, MongoDB, Redis, CI/CD, Streamlit.
-          </p>
-        </div>
-        <div class="card p-5">
-          <h3 class="font-bold text-slate-900 border-l-4 border-purple-500 pl-3 mb-3">Cloud & Tools</h3>
-          <p class="text-sm text-slate-700 leading-relaxed">
-            AWS, GCP, Azure, GitHub Actions, PowerBI, Tableau.
-          </p>
+            <p class="text-accent-400">NVIDIA DLI</p>
+            <p class="text-sm text-slate-300 mt-2">
+              Developed production-ready text generation, RAG, and semantic search pipelines. Built LLM applications
+              using Transformers, LangChain, and vector databases for complex document intelligence.
+            </p>
+          </a>
         </div>
       </div>
     </section>
 
-    <section id="education" class="mx-auto max-w-6xl px-4 py-12">
-      <h2 class="text-3xl font-bold border-b pb-4 mb-8">Education</h2>
-      <div class="card p-6">
-        <div class="flex flex-wrap items-center justify-between gap-2">
-          <h3 class="text-lg font-bold">M.S., Computer Science — Cal Poly Pomona</h3>
-          <span class="text-sm font-semibold text-slate-500">GPA: 3.97 | Aug 2023 - May 2025</span>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 scroll-mt-20">
+      <div class="mx-auto max-w-4xl px-6">
+        <div
+          class="glass-panel rounded-2xl p-8 md:p-12 text-center border border-slate-700 bg-gradient-to-b from-slate-800/50 to-slate-900/50">
+          <h2 class="text-3xl font-bold text-white mb-4">Let's Build Something Intelligent</h2>
+          <p class="text-slate-400 mb-8 max-w-xl mx-auto">
+            Open to Machine Learning, Computer Vision, and Software Engineering roles. Feel free to reach out for
+            collaborations or opportunities.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="mailto:aashishhawadhani@gmail.com"
+              class="px-8 py-3 rounded-full bg-primary-600 hover:bg-primary-500 text-white font-bold transition-all shadow-lg shadow-primary-500/25">
+              <i class="fa-solid fa-envelope mr-2"></i> Send an Email
+            </a>
+            <a href="https://linkedin.com/in/aashish-awadhani" target="_blank"
+              class="px-8 py-3 rounded-full bg-transparent border border-slate-600 hover:bg-slate-800 text-white font-bold transition-all">
+              <i class="fa-brands fa-linkedin mr-2"></i> LinkedIn
+            </a>
+          </div>
         </div>
       </div>
     </section>
+  </main>
 
-    <section id="certification" class="mx-auto max-w-6xl px-4 py-12">
-      <h2 class="text-3xl font-bold border-b pb-4 mb-8">Certification</h2>
-      <div class="card p-6">
-        <h3 class="text-lg font-bold">Rapid App Development with LLMs — NVIDIA DLI</h3>
-        <p class="mt-3 text-slate-700 leading-relaxed">
-          Built LLM-based applications using Transformers, LangChain, and vector databases; developed text-generation, RAG, and semantic search pipelines for production-style use cases.
-        </p>
-      </div>
-    </section>
+  <footer class="py-8 text-center text-sm text-slate-600 border-t border-slate-800 bg-slate-950">
+    <p>&copy; <span id="year"></span> Aashish Awadhani. Built with HTML, Tailwind & <i
+        class="fa-solid fa-heart text-red-500"></i></p>
+  </footer>
 
-    <section id="contact" class="mx-auto max-w-6xl px-4 py-12">
-      <div class="card p-8 bg-slate-900 text-white">
-        <h2 class="text-2xl font-bold">Let's Connect</h2>
-        <p class="mt-4 text-slate-300 max-w-2xl">
-          Open to Machine Learning, Computer Vision, AI, and Software Engineering roles. The fastest way to reach me is email.
-        </p>
-        <div class="mt-8 flex flex-wrap gap-4">
-          <a href="mailto:aashishhawadhani@gmail.com" class="bg-white text-slate-900 px-6 py-2 rounded-xl font-bold hover:bg-slate-200 transition-colors">Email Me</a>
-          <a href="https://linkedin.com/in/aashish-awadhani" target="_blank" class="border border-white px-6 py-2 rounded-xl font-bold hover:bg-white/10 transition-colors">LinkedIn</a>
-        </div>
-      </div>
-    </section>
+  <script>
+    // Set Year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    <footer class="py-12 text-center text-sm text-slate-500 border-t">
-      &copy; <span id="year"></span> Aashish Awadhani. Built with Tailwind CSS.
-    </footer>
+    // Navbar Scroll Effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add('glass-nav', 'shadow-lg');
+      } else {
+        navbar.classList.remove('glass-nav', 'shadow-lg');
+      }
+    });
 
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  </body>
+    // Typing Effect
+    const words = ["Computer Vision Models.", "LLM Applications.", "Scalable Pipelines."];
+    let i = 0;
+
+    function typeWriter() {
+      const heading = document.getElementById("typing-text");
+      if (!heading) return;
+
+      const word = words[i];
+      let j = 0;
+      let isDeleting = false;
+
+      function type() {
+        const currentWord = words[i];
+        if (isDeleting) {
+          heading.textContent = currentWord.substring(0, j - 1);
+          j--;
+        } else {
+          heading.textContent = currentWord.substring(0, j + 1);
+          j++;
+        }
+
+        let typeSpeed = isDeleting ? 50 : 100;
+
+        if (!isDeleting && j === currentWord.length) {
+          typeSpeed = 2000;
+          isDeleting = true;
+        } else if (isDeleting && j === 0) {
+          isDeleting = false;
+          i = (i + 1) % words.length;
+          typeSpeed = 500;
+        }
+
+        setTimeout(type, typeSpeed);
+      }
+      type();
+    }
+
+    // Start typing effect on load
+    window.onload = typeWriter;
+
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    document.getElementById('mobile-menu-btn').addEventListener('click', toggleMobileMenu);
+  </script>
+</body>
+
 </html>
